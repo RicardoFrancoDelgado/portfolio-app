@@ -10,7 +10,7 @@ import { InfoDrawer, type DrawerSection } from './components/InfoDrawer';
 import { SEO } from './components/SEO';
 
 const SECTION_TO_PATH: Record<DrawerSection, string> = {
-  MENU: '/',
+  MENU: '/menu',
   PROJETOS: '/projetos',
   STACK: '/stack',
   SOBRE: '/sobre',
@@ -19,6 +19,7 @@ const SECTION_TO_PATH: Record<DrawerSection, string> = {
 };
 
 const PATH_SECTION_PARAM: Record<string, DrawerSection> = {
+  menu: 'MENU',
   projetos: 'PROJETOS',
   stack: 'STACK',
   sobre: 'SOBRE',
@@ -33,7 +34,7 @@ export const Layout: React.FC = () => {
   const drawerSection: DrawerSection = params.section
     ? PATH_SECTION_PARAM[params.section] ?? 'MENU'
     : 'MENU';
-  const drawerOpen = drawerSection !== 'MENU';
+  const drawerOpen = Boolean(params.section && PATH_SECTION_PARAM[params.section]);
 
   const handleOpenDrawer = (section?: string) => {
     const target = (section as DrawerSection) ?? 'MENU';
@@ -82,7 +83,7 @@ export const Layout: React.FC = () => {
       </main>
 
       {/* Layer 30 (z-30): Header (Sticky Top Overlay) */}
-      <Header />
+      <Header onOpenMenu={() => handleOpenDrawer('MENU')} />
 
       {/* Layer 30 (z-30): Footer Marquee (Bottom Edge Stroke Text) */}
       <FooterMarquee />

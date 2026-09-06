@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Menu } from 'lucide-react';
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  onOpenMenu?: () => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ onOpenMenu }) => {
   return (
     <header className="fixed top-0 left-0 right-0 z-30 w-full px-6 py-5 md:px-12 md:py-6 flex items-center justify-between pointer-events-auto select-none">
       {/* Brand / Logo */}
@@ -50,14 +55,25 @@ export const Header: React.FC = () => {
         </Link>
       </nav>
 
-      {/* Action CTA Button */}
+      {/* Action CTA Button (Desktop) */}
       <Link
         id="commission-button"
         to="/contato"
-        className="font-mono text-xs uppercase tracking-widest px-5 py-2.5 md:px-6 md:py-2.5 rounded-full border border-[#CCFF00] text-[#CCFF00] hover:bg-[#CCFF00] hover:text-black transition-all duration-300 font-semibold shadow-[0_0_15px_rgba(204,255,0,0.2)] hover:shadow-[0_0_25px_rgba(204,255,0,0.6)] active:scale-95 cursor-pointer"
+        className="hidden md:inline-block font-mono text-xs uppercase tracking-widest px-5 py-2.5 md:px-6 md:py-2.5 rounded-full border border-[#CCFF00] text-[#CCFF00] hover:bg-[#CCFF00] hover:text-black transition-all duration-300 font-semibold shadow-[0_0_15px_rgba(204,255,0,0.2)] hover:shadow-[0_0_25px_rgba(204,255,0,0.6)] active:scale-95 cursor-pointer"
       >
         CONTATO
       </Link>
+
+      {/* Menu Button (Mobile) */}
+      <button
+        type="button"
+        onClick={onOpenMenu}
+        aria-label="Abrir menu de navegação"
+        aria-haspopup="dialog"
+        className="md:hidden w-11 h-11 rounded-full border border-white/15 bg-white/5 text-white flex items-center justify-center hover:border-[#CCFF00]/60 hover:text-[#CCFF00] transition-colors duration-300 active:scale-95 cursor-pointer"
+      >
+        <Menu className="w-5 h-5" />
+      </button>
     </header>
   );
 };
