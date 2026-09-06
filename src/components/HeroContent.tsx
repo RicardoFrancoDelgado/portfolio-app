@@ -32,19 +32,6 @@ export const HeroContent: React.FC = () => {
 
   return (
     <div className="relative z-20 flex-1 flex flex-col items-center justify-center w-full px-4 text-center pointer-events-auto select-none mt-10 md:mt-0">
-      {/* Top Tagline / Meta */}
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="mb-3 md:mb-5 inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-md"
-      >
-        <span className="w-2 h-2 rounded-full bg-[#CCFF00] animate-pulse" />
-        <span className="font-mono text-[10px] md:text-xs tracking-widest text-white/70 uppercase">
-          Disponível para novos projetos // 2026
-        </span>
-      </motion.div>
-
       {/* Mammoth Headline */}
       <h1 className="flex flex-col items-center justify-center leading-none tracking-tight">
         {/* Top line: CONSTRUO COM */}
