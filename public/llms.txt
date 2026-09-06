@@ -1,0 +1,18 @@
+# Ricardo Franco Delgado
+
+> Desenvolvedor Fullstack no ecossistema TypeScript, atuando na Infore e como freelancer, cursando Análise e Desenvolvimento de Sistemas na UniCesumar.
+
+Portfólio pessoal apresentando projetos, stack técnica, trajetória profissional e formas de contato.
+
+## Seções
+
+- [Projetos](/projetos): Sete projetos selecionados — desafios de curso, projetos pessoais e em grupo — cobrindo React, Go, Java/Spring Boot, Next.js, entre outros.
+- [Stack](/stack): Tecnologias e ferramentas usadas — Frontend (React, Next.js, TypeScript), Backend (Node.js, Go, Python, Java), Qualidade (testes, CI/CD, arquitetura serverless) e IA aplicada (Claude Code, Codex, Gemini).
+- [Sobre](/sobre): Biografia e trajetória profissional.
+- [Currículo](/curriculo): Linha do tempo profissional e acadêmica, com currículo em PDF para download.
+- [Contato](/contato): LinkedIn, GitHub e email.
+
+## Links
+
+- LinkedIn: https://www.linkedin.com/in/ricardofrancodelgado-dev/
+- GitHub: https://github.com/RicardoFrancoDelgado
